@@ -3,7 +3,7 @@ body{
     font-size: 16px;
     line-height: 1.42;
     color: white;
-    background: url(../логотипы/фон.png);
+    background: url(/project/логотипы/фон.png);
     -webkit-font-smoothing: antialiased;
     -mos-osx-font-smoothing: grayscale;
     margin: 0;
@@ -201,13 +201,13 @@ color: #DFB56D;
     overflow: hidden;
 }
 .offers__item--theme--grey .offers__header {
-    background: url(../img/gg\ \(3\).png); 
+    background: url(/project/img/gg\ \(3\).png); 
 }
 .offers__item--theme--blue .offers__header {
-      background: url(../img/gg\ \(1\).png);
+      background: url(/project/img/gg\ \(1\).png);
 }
 .offers__item--theme--gold .offers__header {
-    background: url(../img/gg\ \(2\).png);
+    background: url(/project/img/gg\ \(2\).png);
 }
 .offers__item:last-child {
     margin-right: 0;
@@ -407,7 +407,7 @@ margin-right: 25px;
     vertical-align: top;
     width: 490px;
     height: 510px;
-    background: url(../img/logo\ \(7\).png) center no-repeat;
+    background: url(/project/img/logo\ \(7\).png) center no-repeat;
     margin-top: 38px;
 }
 .about__desc {
@@ -470,7 +470,7 @@ padding-top: 35px;
 }
 .inner-footer {
     margin-top: auto;
-    background: url(../логотипы/фон.png);
+    background: url(/project/логотипы/фон.png);
 }
 .inner-footer__container {
     padding: 45px 0;
@@ -507,28 +507,28 @@ width: 36px;
 height: 36px;
 }
 .social__items--icon--tg .social__link {
-    background-image: url(../социалки/t\ \(1\).png);
+    background-image: url(/project/социалки/t\ \(1\).png);
 }
 .social__items--icon--tg .social__link:hover {
-background-image: url(../социалки/t.png);
+background-image: url(/project/социалки/t.png);
 }
 .social__items--icon--vk .social__link {
-    background-image: url(../социалки/vk\ \(2\).png);
+    background-image: url(/project/социалки/vk\ \(2\).png);
 }
 .social__items--icon--vk .social__link:hover {
-background-image: url(../социалки/vk\ \(1\).png);
+background-image: url(/project/социалки/vk\ \(1\).png);
 }
 .social__items--icon--fb .social__link {
-    background-image: url(../социалки/facebook\ 1.png);
+    background-image: url(/project/социалки/facebook\ 1.png);
 }
 .social__items--icon--fb .social__link:hover {
-background-image: url(../социалки/f2.png);
+background-image: url(/project/социалки/f2.png);
 }
 .social__items--icon--insta .social__link {
-    background-image: url(../социалки/in\ \(2\).png);
+    background-image: url(/project/социалки/in\ \(2\).png);
 }
 .social__items--icon--insta .social__link:hover {
-background-image: url(../социалки/in\ \(1\).png);
+background-image: url(/project/социалки/in\ \(1\).png);
 }
 /*services*/
 .top-line {
@@ -537,7 +537,7 @@ background-image: url(../социалки/in\ \(1\).png);
     flex-direction: column;
     padding-bottom: 25px;
     
-    background:  #29282D url(../img/bottom-pic\ 1.png) right 20% top no-repeat;
+    background:  #29282D url(/project/img/bottom-pic\ 1.png) right 20% top no-repeat;
 }
 .container__serv {
    
@@ -745,7 +745,7 @@ margin-bottom: 30px;
 
 }
 .review__user::after {
-content: url(../социалки/vk-blue\ 1.png);
+content: url(/project/социалки/vk-blue\ 1.png);
 height: 29px;
 }
 .review__tags {
@@ -782,7 +782,7 @@ height: 29px;
 
 }
 .separator {
-    background: #E5C288 url(../img/phone-n-hand\ 1.png) right 20% bottom no-repeat;
+    background: #E5C288 url(/project/img/phone-n-hand\ 1.png) right 20% bottom no-repeat;
       min-height: 360px;
     display: flex;
     flex-direction: column;
@@ -879,7 +879,7 @@ height: 29px;
    height: 100%;
    align-items: center;
    justify-content: center;
-   background: url(../img/splash.png) center bottom no-repeat;
+   background: url(/project/img/splash.png) center bottom no-repeat;
 }
 .central {
     display: flex;
