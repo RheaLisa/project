@@ -48,7 +48,7 @@ button {
     min-height: 100%;
     overflow: hidden;
     min-width: 1900px;
-    background: url(/project/img/logo\ \(10\).png);
+    background: url(/project/img/logo\ \(10\).png) no-repeat;
 }
 .container {
     margin: 0 auto;
