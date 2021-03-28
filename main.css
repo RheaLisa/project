@@ -48,6 +48,7 @@ button {
     min-height: 100%;
     overflow: hidden;
     min-width: 1900px;
+    background: url(/project/img/logo\ \(10\).png);
 }
 .container {
     margin: 0 auto;
@@ -85,6 +86,8 @@ button {
     padding: 20px;
     width: 200px;
     display: none;
+    background: #EDEDED;
+    color: #000;
 }
 .contacts__dropdown-title:hover .dropdown {
     display: block;
