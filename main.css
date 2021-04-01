@@ -3,7 +3,7 @@ body{
     font-size: 16px;
     line-height: 1.42;
     color: white;
-    background: url(/project/логотипы/фон.png);
+    background: url(./логотипы/фон.png);
     -webkit-font-smoothing: antialiased;
     -mos-osx-font-smoothing: grayscale;
     margin: 0;
@@ -47,12 +47,15 @@ button {
     flex-direction: column;
     min-height: 100%;
     overflow: hidden;
-    min-width: 1900px;
-    background: url(/project/img/logo\ \(10\).png) no-repeat;
+    background: url(./img/logo\ \(10\).png) no-repeat top center;
+}
+
+.wrapper_no-bg {
+    background: none;
 }
 .container {
     margin: 0 auto;
-    width: 1670px;
+    width: 1140px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -85,12 +88,30 @@ button {
     border: 1px solid #000;
     padding: 20px;
     width: 200px;
-    display: none;
     background: #EDEDED;
     color: #000;
+    position: absolute;
+    right: -10000px;
+    border-radius: 5px;
+    top: 95%;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 22px solid #EDEDED;
+    top: -12px;
+    right: 30px;
 }
 .contacts__dropdown-title:hover .dropdown {
-    display: block;
+    right: 0;
+    opacity: 1;
 }
 .menu {
    
@@ -113,7 +134,7 @@ color: #DFB56D;
     margin: 0;
 }
 .menu__link {
-    font-size: 16px;
+    font-size: 14px;
 }
 .menu__item:hover {
     color: #DFB56D;
@@ -128,16 +149,18 @@ color: #DFB56D;
 }
 .contacts__phone {
     text-decoration: none;
-    font-size: 33px;
+    font-size: 26px;
     margin-bottom: 4px;
     text-align: right;
      
 }
 .contacts__dropdown-title {
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: underline;
     color: #DFB56D;
     padding-bottom: 10px;
+    width: max-content;
+    margin-left: auto;
 }
 .hero__text-section {
     width: 590px;
@@ -149,14 +172,14 @@ color: #DFB56D;
     justify-content: space-between;
 }
 .hero__title {
-    font-size: 70px;
+    font-size: 58px;
     font-weight: bold;
     line-height: 1.2;
     margin-bottom: 23px;
     vertical-align: middle;
 }
 .hero__subtitle {
-    font-size: 21px;
+    font-size: 18px;
     color:#DFB56D;
     margin-bottom: 70px;
 }
@@ -167,8 +190,8 @@ color: #DFB56D;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 16px;
-    padding: 20px 50px;
+    font-size: 14px;
+    padding: 17px 38px;
 }
 .btn--color--ginger:hover {
     background: #DFB56D;
@@ -183,7 +206,7 @@ color: #DFB56D;
     text-align: inherit;
 }
 .section-title {
-    font-size: 45px;
+    font-size: 36px;
     font-weight: bold;
     margin-bottom: 60px;
     margin-top: 255px;
@@ -191,8 +214,6 @@ color: #DFB56D;
 .offers {
     display: flex;
     justify-content: space-between;
-    width: 1420px;
-    height: 565px;
 }
 .offers__item {
     min-height: 470px;
@@ -204,13 +225,13 @@ color: #DFB56D;
     overflow: hidden;
 }
 .offers__item--theme--grey .offers__header {
-    background: url(/project/img/gg\ \(3\).png); 
+    background-image: url(./img/gg\ \(3\).png); 
 }
 .offers__item--theme--blue .offers__header {
-      background: url(/project/img/gg\ \(1\).png);
+      background-image: url(./img/gg\ \(1\).png);
 }
 .offers__item--theme--gold .offers__header {
-    background: url(/project/img/gg\ \(2\).png);
+    background-image: url(./img/gg\ \(2\).png);
 }
 .offers__item:last-child {
     margin-right: 0;
@@ -219,6 +240,8 @@ color: #DFB56D;
     min-height: 162px;
     margin-bottom: 23px;
     position: relative;
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 offers__header::before {
     content: "";
@@ -232,23 +255,21 @@ offers__header::before {
     background: grey;
     }
 .offers__header-img {
+    position: absolute;
     left: 50%;
     top: 50%;
-     margin-left: 137px;
-    margin-top: 40px;
+    transform: translate(-50%, -50%);
+    
 }
 
-.offers__content {
-    padding: 36px, 30px;
-    }
 .offers__title {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 24px;
     margin-bottom: 20px;
-    margin-left: 20px;
+    margin-left: 18px;
  }
 .offers__price {
-    font-size: 44px;
+    font-size: 36px;
     font-style: normal;
     margin-bottom: 10px;
    
@@ -257,9 +278,9 @@ offers__header::before {
 .offers__prices-cell {
     display: inline-block;
     vertical-align: top;
-    width: 115px;
-    margin-right: 40px;
-    margin-left: 30px;
+    width: 108px;
+    margin-right: 30px;
+    margin-left: 22px;
     text-align:center;
     margin-bottom: 20px;
    }
@@ -275,7 +296,7 @@ offers__header::before {
 .offers__btn-wrapper {
     text-align: center;
    margin-bottom: 35px;
-   margin-top: 50px;
+   margin-top: 15px;
 }
 .section-title__news {
     margin-top: 18px;
@@ -286,7 +307,6 @@ offers__header::before {
     vertical-align: top;
     display: flex;
     justify-content: space-between;
-    width: 1445px;
   }
 .single-news {
 position: relative;
@@ -319,12 +339,12 @@ margin-right: 25px;
     margin-bottom: 30px;
 }
 .single-news__date {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 15px;
     margin-left: 40px;
 }
 .single-news__title {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
     margin-left: 30px;
@@ -333,7 +353,7 @@ margin-right: 25px;
 }
 .single-news__desc {
     margin-left: 35px;
-    font-size: 20px;
+    font-size: 16px;
 
 }
 .btn--color--black {
@@ -355,6 +375,7 @@ margin-right: 25px;
 .pager {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
     
 }
@@ -376,15 +397,14 @@ margin-right: 25px;
 .pager__display {
     display: flex;
     justify-content: center;
-        font-size: 20px;
+        font-size: 16px;
    
 }
 .pager__list {
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 16px;
     margin-left: 30px;
-    margin-right: 230px;
 }
 .pager__item {
   text-align: center;
@@ -400,6 +420,7 @@ margin-right: 25px;
     border-radius: 50%;
     text-decoration: none;
     font-weight: bold;
+    line-height: 32px;
 }
 .section__about {
     margin-bottom: 95px;
@@ -410,7 +431,7 @@ margin-right: 25px;
     vertical-align: top;
     width: 490px;
     height: 510px;
-    background: url(/project/img/logo\ \(7\).png) center no-repeat;
+    background: url(./img/logo\ \(7\).png) center no-repeat;
     margin-top: 38px;
 }
 .about__desc {
@@ -420,9 +441,8 @@ margin-right: 25px;
     vertical-align: top;
     width: 785px;
     position: relative;
-    margin-top: 180px;
-    margin-right: 290px;
-    margin-left: -50px;
+    margin-top: 125px;
+    margin-left: -176px;
   
 }
 .about__title{
@@ -432,7 +452,8 @@ margin-right: 25px;
 }
 .about__desc-text {
     margin-bottom: 105px;
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 27px;
 }
 .about__desc-text p {
     margin-bottom: 20px;
@@ -452,8 +473,6 @@ margin-right: 25px;
 }
 .footer-conteiner {
     margin-top: auto;
-    padding-left: 120px;
-    width: 1670px;
 }
 .menu__footer {
    margin-left: -140px;
@@ -462,9 +481,8 @@ margin-right: 25px;
     height: 140px;
     margin-top: 12px;
 }
-.contacts__footer {
-padding-right: 130px;
-padding-top: 35px;
+.footer__rew {
+    height: auto;
 }
 
 .footer-container__content {
@@ -473,7 +491,7 @@ padding-top: 35px;
 }
 .inner-footer {
     margin-top: auto;
-    background: url(/project/логотипы/фон.png);
+    background: url(./логотипы/фон.png);
 }
 .inner-footer__container {
     padding: 45px 0;
@@ -510,28 +528,28 @@ width: 36px;
 height: 36px;
 }
 .social__items--icon--tg .social__link {
-    background-image: url(/project/социалки/t\ \(1\).png);
+    background-image: url(./социалки/t\ \(1\).png);
 }
 .social__items--icon--tg .social__link:hover {
-background-image: url(/project/социалки/t.png);
+background-image: url(./социалки/t.png);
 }
 .social__items--icon--vk .social__link {
-    background-image: url(/project/социалки/vk\ \(2\).png);
+    background-image: url(./социалки/vk\ \(2\).png);
 }
 .social__items--icon--vk .social__link:hover {
-background-image: url(/project/социалки/vk\ \(1\).png);
+background-image: url(./социалки/vk\ \(1\).png);
 }
 .social__items--icon--fb .social__link {
-    background-image: url(/project/социалки/facebook\ 1.png);
+    background-image: url(./социалки/facebook\ 1.png);
 }
 .social__items--icon--fb .social__link:hover {
-background-image: url(/project/социалки/f2.png);
+background-image: url(./социалки/f2.png);
 }
 .social__items--icon--insta .social__link {
-    background-image: url(/project/социалки/in\ \(2\).png);
+    background-image: url(./социалки/in\ \(2\).png);
 }
 .social__items--icon--insta .social__link:hover {
-background-image: url(/project/социалки/in\ \(1\).png);
+background-image: url(./социалки/in\ \(1\).png);
 }
 /*services*/
 .top-line {
@@ -540,7 +558,7 @@ background-image: url(/project/социалки/in\ \(1\).png);
     flex-direction: column;
     padding-bottom: 25px;
     
-    background:  #29282D url(/project/img/bottom-pic\ 1.png) right 20% top no-repeat;
+    background:  #29282D url(./img/bottom-pic\ 1.png) right 20% top no-repeat;
 }
 .container__serv {
    
@@ -587,14 +605,11 @@ background-image: url(/project/социалки/in\ \(1\).png);
 background: #F2F2F2;
 color: #303030;
 padding: 40px 0;
-margin-top: 30px;
 }
 .service {
 display: flex;
-padding: 58px 110px;
 text-decoration: none;
 margin-bottom: 45px;
-width: 85%;
 padding-bottom: 0px;
     height: 450px;
 }
@@ -605,11 +620,15 @@ padding-bottom: 0px;
     background: #DFB56D;
 }
 .services__img {
-    width: 33%;
+    width: 40%;
     margin-right: 4%;
+    flex-shrink: 0;
 }
 .services__content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 
 }
 .services__title {
@@ -618,6 +637,9 @@ padding-bottom: 0px;
     margin-bottom: 45px;
     color: #202020;
     
+}
+.service--btn {
+    align-self: start;
 }
 .service--btn::before {
     display: flex;
@@ -630,7 +652,6 @@ margin-bottom: 30px;
 }
 .pager--serv {
     margin-top: 100px;
-    margin-right: 200px;
     padding-top: 5px;
 }
 .pager__display--serv{
@@ -649,7 +670,6 @@ margin-bottom: 30px;
     align-items: center;
     font-size: 16px;
     margin-left: 10px;
-    margin-right: 230px;
 }
 .inner-section {
     background: #F4F5f5;
@@ -748,7 +768,7 @@ margin-bottom: 30px;
 
 }
 .review__user::after {
-content: url(/project/социалки/vk-blue\ 1.png);
+content: url(./социалки/vk-blue\ 1.png);
 height: 29px;
 }
 .review__tags {
@@ -785,7 +805,7 @@ height: 29px;
 
 }
 .separator {
-    background: #E5C288 url(/project/img/phone-n-hand\ 1.png) right 20% bottom no-repeat;
+    background: #E5C288 url(./img/phone-n-hand\ 1.png) right 20% bottom no-repeat;
       min-height: 360px;
     display: flex;
     flex-direction: column;
@@ -816,14 +836,18 @@ height: 29px;
     flex: 1;
     margin-right: 30px;
     border-radius: 4px;
-    border: 1px solid #E5C288
+    border: 1px solid #fff;
     padding: 22px 30px;
     font-size: 18px;
     color: #000;
-    background: #ffff;
-  
-
+    background: #fff;
+    outline: none;
 }
+
+.form__input:focus {
+    border-color: #E5C288;
+}
+
 .form__input::placeholder {
     color: #666666;
 }
@@ -882,13 +906,13 @@ height: 29px;
    height: 100%;
    align-items: center;
    justify-content: center;
-   background: url(/project/img/splash.png) center bottom no-repeat;
+   background: url(./img/splash.png) center bottom no-repeat;
 }
 .central {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: bounce 1.3 infinite;
+    animation: bounce 1.3s 1;
 }
 .central__logo {
     margin-bottom: 65px;
